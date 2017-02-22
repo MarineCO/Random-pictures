@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'RandomController@getRandomFromArray');
+
+Route::get('/resize/{id}/{width}/{height}', 'RandomController@resize');
