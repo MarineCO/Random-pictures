@@ -32,7 +32,8 @@
                 <div class="ui big fluid action input">
                     <input id="url" type="text" value="http://www.heroku.it/900x400"/>
                     <button id="copy" data-clipboard-target="#url" class="ui massive yellow right labeled icon button">
-                    <div class="ui custom popup">Copied !</div>
+                    <div class="ui popup success">Copied !</div>
+                    <div class="ui popup fail">Failed !</div>
                         <i class="copy icon"></i>Copy</button>
                 </div>
             </div>
@@ -42,5 +43,6 @@
     <script> window.Laravel = { csrfToken : "{{csrf_token()}}"}; </script>
     <script src="{{mix('/js/app.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.7/semantic.min.js"></script>
 </body>
 </html>

@@ -25,19 +25,33 @@ require('./bootstrap');
 			console.log("resize bouton fonctionne");
 		},
 
+		copied: function() {
+			$('#copy').popup({
+				popup: $('.popup.success'),
+				on: 'click'
+			});
+		},
+
+		notCopied: function() {
+			$('#copy').popup({
+				popup: $('.popup.fail'),
+				on: 'click'
+			});
+		},
+
 		copyUrl: function() {
 			let clipboard = new Clipboard(this);
-
+			console.log('click');
 			clipboard.on('success', function(e) {
 				console.log(e);
+				app.copied();
 			});
 
 			clipboard.on('error', function(e) {
 				console.log(e);
+				app.notCopied();
 			});
 		}
-
-
 	}
 
 	app.init();
