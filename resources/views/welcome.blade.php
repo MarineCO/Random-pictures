@@ -13,8 +13,8 @@
             <div class="ui center aligned container">
                 <h1>Random Pictures</h1>
                 <h2>"Take your beautiful picture !"</h2>
-                <img src="/../img/img-4.jpg"/>
-                <div class="massive ui fluid teal button">Choose another picture</div>
+                <img id="pics" src="{{ $randomImage }}"/>
+                <div id="choose" class="massive ui fluid teal button">Choose another picture</div>
                 <div class="ui massive form">
                     <div class="two fields">
                         <div class="field">
