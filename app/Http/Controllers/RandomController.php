@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
-class RandomController extends Controller
-{
+class RandomController extends Controller {
 
 	public function getRandomFromArray() {
 		// $dir = "img/";
@@ -22,6 +21,5 @@ class RandomController extends Controller
 		$image = Image::make($dir . 'img-' . $id . '.jpg')->resize($width, $height);
 		return $image->response('jpg');
 	}
-
 	
 }

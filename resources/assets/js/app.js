@@ -16,6 +16,7 @@ require('./bootstrap');
 		listeners: function() {
 			$('#choose').on('click', this.changePicture.bind(this));
 			$('#resize').on('click', this.resizePicture.bind(this));
+			$('#copy').on('click', this.copyUrl);
 		},
 
 		changePicture: function() {
@@ -29,7 +30,21 @@ require('./bootstrap');
 			let width = $('#width').val();
 			let height = $('#height').val();
 			$('#pics').attr('src', '/resize/' + id + '/' + width + '/' + height);
+		},
+
+		copyUrl: function() {
+			let clipboard = new Clipboard(this);
+
+			clipboard.on('success', function(e) {
+				console.log(e);
+			});
+
+			clipboard.on('error', function(e) {
+				console.log(e);
+			});
 		}
+
+
 	}
 
 	app.init();
