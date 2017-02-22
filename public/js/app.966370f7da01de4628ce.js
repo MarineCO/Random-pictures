@@ -11163,22 +11163,29 @@ process.umask = function() { return 0; };
 
 	var app = {
 
+		current_id: null,
+
 		init: function init() {
 			this.listeners();
+			this.changePicture();
 		},
 
 		listeners: function listeners() {
-			$('#choose').on('click', this.changePicture);
-			$('#resize').on('click', this.resizePicture);
+			$('#choose').on('click', this.changePicture.bind(this));
+			$('#resize').on('click', this.resizePicture.bind(this));
 		},
 
 		changePicture: function changePicture() {
 			var randomNum = Math.floor(Math.random() * 10 + 1);
 			$('#pics').attr('src', 'img/img-' + randomNum + '.jpg');
+			this.current_id = randomNum;
 		},
 
 		resizePicture: function resizePicture() {
-			console.log("resize bouton fonctionne");
+			var id = this.current_id;
+			var width = $('#width').val();
+			var height = $('#height').val();
+			$('#pics').attr('src', '/resize/' + id + '/' + width + '/' + height);
 		}
 	};
 
