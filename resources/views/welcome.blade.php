@@ -26,7 +26,7 @@
                             <input id="height" type="text" name="height" value="400">
                         </div>
                     </div>
-                    <div class="massive ui submit button">Resize</div>
+                    <div id="resize" class="massive ui submit button">Resize</div>
                 </div>
                 <br>
                 <div class="ui big fluid action input">
