@@ -34,7 +34,6 @@ require('./bootstrap');
 			let url =  window.location.href + 'resize/' + id + '/' + width + '/' + height ;
 			$('#pics').attr('src', url);
 			$('#url').val(url);
-
 		},
 
 		copyUrl: function() {
