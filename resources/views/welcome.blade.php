@@ -27,8 +27,7 @@
                                 <input id="height" type="text" name="height" value="400">
                             </div>
                         </div>
-                        <div id="resize" class="massive ui submit button">Resize
-                        </div>
+                        <div id="resize" class="massive ui submit button">Resize</div>
                     </div>
                     <br>
                     <div class="ui big fluid action input">
@@ -42,10 +41,11 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <script> window.Laravel = { csrfToken : "{{csrf_token()}}"}; </script>
-        <script src="{{mix('/js/app.js')}}"></script>
-        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.7/semantic.min.js"></script>
-    </body>
-    </html>
+    <script> window.Laravel = { csrfToken : "{{csrf_token()}}"}; </script>
+    <script src="{{mix('/js/app.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.7/semantic.min.js"></script>
+</body>
+</html>
