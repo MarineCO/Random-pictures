@@ -12,30 +12,32 @@
         <div class="column">
             <div class="ui center aligned container">
                 <h1>Random Pictures</h1>
-                <h2>"Take your beautiful picture !"</h2>
+                <h2 class="subtitle">"Take your beautiful picture !"</h2>
                 <img id="pics" src=""/>
-                <div id="choose" class="massive ui fluid teal button">Choose another picture</div>
-                <div class="ui massive form">
-                    <div class="two fields">
-                        <div class="field">
-                            <label for="width">Width</label>
-                            <input id="width" type="text" name="width" value="900">
+                <div class="bloc">
+                    <div id="choose" class="massive ui fluid teal button">Choose another picture</div>
+                    <div class="ui massive form">
+                        <div class="two fields">
+                            <div class="field">
+                                <label for="width">Width</label>
+                                <input id="width" type="text" name="width" value="700">
+                            </div>
+                            <div class="field">
+                                <label for="height">Height</label>
+                                <input id="height" type="text" name="height" value="400">
+                            </div>
                         </div>
-                        <div class="field">
-                            <label for="height">Height</label>
-                            <input id="height" type="text" name="height" value="400">
-                        </div>
+                        <div id="resize" class="massive ui fluid submit button">Resize</div>
                     </div>
-                    <div id="resize" class="massive ui submit button">Resize</div>
-                </div>
-                <br>
-                <div class="ui big fluid action input">
-                    <input id="url" type="text" value="http://www.heroku.it/900x400"/>
-                    <button id="copy" data-clipboard-target="#url" class="ui massive yellow right labeled icon button">
-                        <div class="ui popup success">Copied !</div>
-                        <div class="ui popup fail">Failed !</div>
-                        <i class="copy icon"></i>Copy
-                    </button>
+                    <br>
+                    <div class="ui big fluid action input">
+                        <input id="url" type="text" value="http://www.heroku.it/900x400"/>
+                        <button id="copy" data-clipboard-target="#url" class="ui massive yellow right labeled icon button">
+                            <div class="ui popup success">Copied !</div>
+                            <div class="ui popup fail">Failed !</div>
+                            <i class="copy icon"></i>Copy
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
