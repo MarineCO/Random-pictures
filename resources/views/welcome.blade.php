@@ -30,7 +30,7 @@
                 </div>
                 <br>
                 <div class="ui big fluid action input">
-                    <input id="url" type="text" value="http://www.heroku.it/900x400"/>
+                    <input id="url" type="text"/>
                     <button id="copy" data-clipboard-target="#url" class="ui massive yellow right labeled icon button">
                         <div class="ui popup success">Copied !</div>
                         <div class="ui popup fail">Failed !</div>
