@@ -21,15 +21,19 @@ require('./bootstrap');
 
 		changePicture: function() {
 			let randomNum = Math.floor((Math.random()*10)+1);
-			$('#pics').attr('src', 'img/img-' + randomNum + '.jpg');
 			this.current_id = randomNum;
+			let url = window.location.href + 'img/img-' + randomNum + '.jpg';
+			$('#pics').attr('src', url);
+			$('#url').val(url);
 		},
 
 		resizePicture: function() {
 			let id = this.current_id;
 			let width = $('#width').val();
 			let height = $('#height').val();
-			$('#pics').attr('src', '/resize/' + id + '/' + width + '/' + height);
+			let url =  window.location.href + 'resize/' + id + '/' + width + '/' + height ;
+			$('#pics').attr('src', url);
+			$('#url').val(url);
 		},
 
 		copied: function() {
