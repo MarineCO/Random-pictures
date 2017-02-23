@@ -43,8 +43,7 @@ require('./bootstrap');
 				$('#copy')
 				.popup({
 					content: 'Copied!',
-					on: 'click',
-					size: 500
+					on: 'click'
 				})
 				.popup('show');
 			});
