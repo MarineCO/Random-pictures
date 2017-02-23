@@ -34,33 +34,19 @@ require('./bootstrap');
 			let url =  window.location.href + 'resize/' + id + '/' + width + '/' + height ;
 			$('#pics').attr('src', url);
 			$('#url').val(url);
-		},
 
-		copied: function() {
-			$('#copy').popup({
-				popup: $('.popup.success'),
-				on: 'click'
-			});
-		},
-
-		notCopied: function() {
-			$('#copy').popup({
-				popup: $('.popup.fail'),
-				on: 'click'
-			});
 		},
 
 		copyUrl: function() {
-			let clipboard = new Clipboard(this);
-			console.log('click');
-			clipboard.on('success', function(e) {
-				console.log(e);
-				app.copied();
-			});
-
-			clipboard.on('error', function(e) {
-				console.log(e);
-				app.notCopied();
+			let clipboard = new Clipboard('#copy');
+			clipboard.on('success', function() {
+				$('#copy')
+				.popup({
+					content: 'Copied!',
+					on: 'click',
+					size: 500
+				})
+				.popup('show');
 			});
 		}
 	}

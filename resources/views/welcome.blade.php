@@ -12,7 +12,7 @@
         <div class="column">
             <div class="ui center aligned container">
                 <h1>Random Pictures</h1>
-                <h2>"Take your beautiful picture !"</h2>
+                <h2>"A fine selection of the most beautiful pictures on the world wide web"</h2>
                 <img id="pics" src=""/>
                 <div id="choose" class="massive ui fluid teal button">Choose another picture</div>
                 <div class="ui massive form">
@@ -32,8 +32,6 @@
                 <div class="ui big fluid action input">
                     <input id="url" type="text"/>
                     <button id="copy" data-clipboard-target="#url" class="ui massive yellow right labeled icon button">
-                        <div class="ui popup success">Copied !</div>
-                        <div class="ui popup fail">Failed !</div>
                         <i class="copy icon"></i>Copy
                     </button>
                 </div>
