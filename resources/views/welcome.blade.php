@@ -13,7 +13,7 @@
             <div class="ui center aligned container">
                 <h1>Random Pictures</h1>
                 <h2>"A fine selection of the best pictures worldwide"</h2>
-                <img id="pics" src=""/>
+                <img id="pics" src="/img/img-1.jpg"/>
                 <div class="bloc">
                     <div id="choose" class="massive ui fluid teal button">Choose another picture</div>
                     <div class="ui massive form">

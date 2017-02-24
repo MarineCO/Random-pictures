@@ -6,11 +6,11 @@ require('./bootstrap');
 
 	let app = {
 
-		current_id: null,
+		current_id: 1,
 
 		init: function() {
 			this.listeners();
-			this.changePicture();
+			$('#url').val(window.location.href + 'img/img-1.jpg');
 		},
 
 		listeners: function() {
@@ -21,6 +21,9 @@ require('./bootstrap');
 
 		changePicture: function() {
 			let randomNum = Math.floor((Math.random()*10)+1);
+			if (randomNum === this.current_id) {
+				randomNum = randomNum +1;
+			}
 			this.current_id = randomNum;
 			let url = window.location.href + 'img/img-' + randomNum + '.jpg';
 			$('#pics').attr('src', url);
