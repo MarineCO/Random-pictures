@@ -11182,6 +11182,8 @@ process.umask = function() { return 0; };
 			var url = window.location.href + 'img/img-' + randomNum + '.jpg';
 			$('#pics').attr('src', url);
 			$('#url').val(url);
+			$('#width').val(700);
+			$('#height').val(400);
 		},
 
 		resizePicture: function resizePicture() {
