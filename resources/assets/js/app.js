@@ -21,8 +21,10 @@ require('./bootstrap');
 
 		changePicture: function() {
 			let randomNum = Math.floor((Math.random()*10)+1);
-			if (randomNum === this.current_id) {
+			if (randomNum === this.current_id && randomNum < 10) {
 				randomNum = randomNum +1;
+			} else if (randomNum === this.current_id && randomNum === 10) {
+				randomNum = randomNum -1;
 			}
 			this.current_id = randomNum;
 			let url = window.location.href + 'img/img-' + randomNum + '.jpg';
@@ -39,6 +41,7 @@ require('./bootstrap');
 			let url =  window.location.href + 'resize/' + id + '/' + width + '/' + height ;
 			$('#pics').attr('src', url);
 			$('#url').val(url);
+
 		},
 
 		copyUrl: function() {
@@ -52,6 +55,8 @@ require('./bootstrap');
 				.popup('show');
 			});
 		}
+
+		
 	}
 
 	app.init();

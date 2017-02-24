@@ -11163,11 +11163,11 @@ process.umask = function() { return 0; };
 
 	var app = {
 
-		current_id: null,
+		current_id: 1,
 
 		init: function init() {
 			this.listeners();
-			this.changePicture();
+			$('#url').val(window.location.href + 'img/img-1.jpg');
 		},
 
 		listeners: function listeners() {
@@ -11178,6 +11178,11 @@ process.umask = function() { return 0; };
 
 		changePicture: function changePicture() {
 			var randomNum = Math.floor(Math.random() * 10 + 1);
+			if (randomNum === this.current_id && randomNum < 10) {
+				randomNum = randomNum + 1;
+			} else if (randomNum === this.current_id && randomNum === 10) {
+				randomNum = randomNum - 1;
+			}
 			this.current_id = randomNum;
 			var url = window.location.href + 'img/img-' + randomNum + '.jpg';
 			$('#pics').attr('src', url);
@@ -11204,6 +11209,7 @@ process.umask = function() { return 0; };
 				}).popup('show');
 			});
 		}
+
 	};
 
 	app.init();
