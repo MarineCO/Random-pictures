@@ -17,7 +17,7 @@ class RandomController extends Controller {
 	}
 
 	public function resize($id, $width, $height) {
-		$dir = "img/";
+		$dir = public_path('img/');
 		$image = Image::make($dir . 'img-' . $id . '.jpg')->resize($width, $height);
 		return $image->response('jpg');
 	}
