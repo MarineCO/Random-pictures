@@ -10,7 +10,7 @@ require('./bootstrap');
 
 		init: function() {
 			this.listeners();
-			$('#url').val(window.location.href + 'img/img-1.jpg');
+			$('#url').val(window.location.href + 'img/img-17.jpg');
 		},
 
 		listeners: function() {
@@ -20,10 +20,10 @@ require('./bootstrap');
 		},
 
 		changePicture: function() {
-			let randomNum = Math.floor((Math.random()*25)+1);
-			if (randomNum === this.current_id && randomNum < 25) {
+			let randomNum = Math.floor((Math.random()*30)+1);
+			if (randomNum === this.current_id && randomNum < 30) {
 				randomNum = randomNum +1;
-			} else if (randomNum === this.current_id && randomNum === 25) {
+			} else if (randomNum === this.current_id && randomNum === 30) {
 				randomNum = randomNum -1;
 			}
 			this.current_id = randomNum;
