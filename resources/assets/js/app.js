@@ -20,10 +20,10 @@ require('./bootstrap');
 		},
 
 		changePicture: function() {
-			let randomNum = Math.floor((Math.random()*10)+1);
-			if (randomNum === this.current_id && randomNum < 10) {
+			let randomNum = Math.floor((Math.random()*25)+1);
+			if (randomNum === this.current_id && randomNum < 25) {
 				randomNum = randomNum +1;
-			} else if (randomNum === this.current_id && randomNum === 10) {
+			} else if (randomNum === this.current_id && randomNum === 25) {
 				randomNum = randomNum -1;
 			}
 			this.current_id = randomNum;
